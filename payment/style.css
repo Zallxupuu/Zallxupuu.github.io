@@ -1,0 +1,152 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: rgb(32,139,176);
+background: linear-gradient(25deg, rgba(32,139,176,1) 3%, rgba(104,180,236,1) 34%, rgba(20,126,185,1) 69%);
+}
+.card{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 400px;
+    height:auto;
+    background-color: rgba(255, 255, 255, 0.171);
+    backdrop-filter: blur(30px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.container h1{
+    text-align: center;
+    font-family: head;
+    color: white;
+    margin-bottom: 2em;
+}
+
+@font-face {
+    font-family: head;
+    src: url(../main/asset/font/Poppins-Bold.ttf);
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+form label{
+    font-family: head;
+    color: white;
+    margin-right: 1em;
+}
+
+form input{
+    font-family: head;
+    padding-right: 2em;
+    color: white;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    border-bottom: 2px solid white;
+    margin-bottom: 2em;
+}
+
+.action-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.action-btn button{
+    outline: none;
+    font-family: head;
+    color: white;
+    border: none;
+    background-color: #51acee;
+    padding: 10px 3em;
+    border-radius: 10px;
+    transition: all .2s;
+    margin-top: 2em;
+    font-size: 20px;
+}
+
+.action-btn button:hover{
+    transform: scale(1.1);
+}
+
+.action-btn button:active{
+    transform: scale(.90);
+}
+
+/* POPUP */
+.popup{
+    background-color: rgba(255, 255, 255, 0.171);
+    backdrop-filter: blur(30px);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content{
+    width: 300px;
+}
+
+.popup-content img{
+    width: 400px;
+}
+
+.popup-content h1{
+    text-align: center;
+    font-family: head;
+    color: white;
+
+}
+
+.popup-content a{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #3697dd;
+    padding: 10px 4em;
+    border-radius: 1em;
+    text-decoration: none;
+    font-family: head;
+    font-size: 20px;
+    color: white;
+    margin-top: 2em;
+    transition: .2s;
+}
+
+.popup-content a:hover{
+    transform: scale(1.1);
+}
+
+.popup-content a:active{
+    transform: scale(.90);
+}
+
+@media (max-width:480px) {
+    .container{ 
+        width: 300px;
+    }
+
+    .popup img{
+        width: 250px;
+    }
+
+    .popup-content a{
+        padding: 10px 1em;
+    }
+}

@@ -1,0 +1,319 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background: rgb(32,139,176);
+background: linear-gradient(25deg, rgba(32,139,176,1) 3%, rgba(104,180,236,1) 34%, rgba(20,126,185,1) 69%);
+}
+
+ li{
+list-style: none;
+color: white;
+font-family: navbar;
+}
+
+ li a{
+    text-decoration: none;
+    color: white;
+    transition: .2s ;
+    font-size: 1em;
+    font-family: navbar;
+}
+@font-face {
+    font-family: navbar;
+    src: url(asset/font/Poppins-Medium.ttf);
+}
+
+ li a:hover{
+    color: #68b4ec;
+}
+li:hover{
+    color: #68b4ec;
+    cursor: pointer;
+}
+
+/* Navbar */
+nav{
+    position: relative;
+    padding: 0 2rem;
+}
+
+nav .container{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ .brand{
+    font-size: 1.2em;
+    font-weight: bold
+}
+ .brand p{
+    font-family: brand;
+    color: white;
+}
+span{
+    color: #68b4ec;
+}
+@font-face {
+    font-family: brand;
+    src: url(asset/font/Poppins-Bold.ttf);
+}
+
+nav ul{
+    display: flex;
+    gap: 2em;
+}
+
+nav .toggle-btn{
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    display: none;
+}
+
+.action-btn{
+    background-color: #68b4ec;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition:  .2s;
+}
+
+.action-btn:hover{
+    transform: scale(1.05);
+}
+
+.action-btn:active{
+    transform: scale(.95);
+}
+
+/* responsive dropdown */
+.dropdown-responsive{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    height: 0 ;
+    top: 60px;
+    width: 300px;
+    background:rgba(255, 255, 255, 0.082) ;
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-responsive.open{
+    height: 150px;
+}
+
+.dropdown-responsive li{
+    padding: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive */
+@media (max-width:992px) {
+    nav .container ul{
+        display: none;
+    }
+
+    nav .toggle-btn{    
+        display: block;
+    }
+
+    .dropdown-responsive{
+        display: block;
+    }
+}
+
+/* Main */
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome{
+    position: relative;
+}
+
+.welcome h1{
+    text-align: center;
+    color: white;
+    font-family: welcome;
+}
+.welcome p{
+    color: white;
+    font-family: desc;
+}
+@font-face {
+    font-family: desc;
+    src: url(asset/font/Poppins-Light.ttf);
+}
+@font-face {
+    font-family: welcome;
+    src: url(asset/font/Poppins-ExtraBold.ttf);
+}
+
+@media (max-width:800px){
+    .welcome{
+        padding: 2em;
+    }
+    .welcome h1{
+        text-align: left;
+        text-wrap: wrap ;
+    }
+    .welcome p{
+        text-wrap: wrap;
+    }
+}
+
+.card img{
+    width: 100px;
+}
+
+.phone {
+    margin: 2em;
+}
+
+.phone .phone-name{
+    margin-left: 1em;
+    font-family: names;
+    font-size: 2.5em;
+    color: white;
+}
+@font-face {
+    font-family: names;
+    src: url(asset/font/Poppins-ExtraBold.ttf);
+}
+
+.wraper{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 150px;
+    height: auto;
+    background: rgba(255, 255, 255, 0.082);
+    padding:2em;
+    margin: 1em;
+    border-radius: 1em;
+}
+
+.card p {
+    font-family: card;
+    color: white;
+}
+@font-face {
+    font-family: card;
+    src: url(asset/font/Poppins-Bold.ttf);
+}
+.card label{
+    font-family: harga;
+}
+@font-face {
+    font-family: harga;
+    src: url(asset/font/Poppins-ExtraLight.ttf);
+}
+
+.card a{
+    display: flex;
+    text-align: center;
+    padding: 5px 1em;
+    background-color: rgba(255, 255, 255, 0.226);
+    border-radius: 1em;
+    text-decoration: none;
+    color: white;
+    font-family: buy-btn;
+    margin-top: .5em;
+    transition: .2s;
+}
+
+.card a:hover{
+    transform: scale(.95);
+}
+
+.card a:active{
+    transform: scale(.80);
+}
+@font-face {
+    font-family: buy-btn;
+    src: url(asset/font/Poppins-ExtraLight.ttf);
+}
+
+@media (max-width:1192px) {
+    .card{
+        padding: 1.2em;
+    }
+    .wraper{
+        justify-content: center;
+    }
+}
+
+@media (max-width:510px) {
+    .wraper{
+        justify-content: center;
+    }
+}
+
+
+
+ .content{
+    border-top: 2px solid white;
+    padding: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+ .content a{
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-family: card;
+    letter-spacing: 2px;
+}
+
+ .content a:hover{
+    color: #68b4ec ;
+}
+
+@media (max-width:510px) {
+    .content{
+        justify-content: center;
+        align-items: center;
+    }
+    .content a{
+        margin: 1em;
+    }
+}
+
+@media (max-width:800px) {
+    .content a{
+        margin: 1em;
+    }   
+}
