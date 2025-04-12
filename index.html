@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="rating.css">
+  <title>Service Rating</title>
+</head>
+
+<body>
+  <div class="container-head">
+    <h1>Seberapa Puas kamu dengan Pelayanan</h1>
+    
+    <div class="span">
+      <span id="name">D</span>
+      <span id="name">Z</span>
+      <span id="name">U</span>
+      <span id="name">L</span>
+      <span id="name">L</span>
+
+      <span id="name"></span>
+
+      <span id="name">S</span>
+      <span id="name">T</span>
+      <span id="name">O</span>
+      <span id="name">R</span>
+      <span id="name">E</span>
+    </div>
+    
+  </div>
+
+  <div class="container-rating">
+    <input type="radio" name="container" id="c1" />
+    <label for="c1"></label>
+    <input type="radio" name="container" id="c2" />
+    <label for="c2"></label>
+    <input type="radio" name="container" id="c3" />
+    <label for="c3"></label>
+    <input type="radio" name="container" id="c4" />
+    <label for="c4"></label>
+    <input type="radio" name="container" id="c5" />
+    <label for="c5"></label>
+  </div>
+
+  <div class="container-chat">
+  <label for="messageInput">Kritik/Saran :</label><br>
+  <input type="text" id="messageInput" placeholder="Type your message here">
+  <input type="text" id="star" value="Bintang diberikan : ">
+    <input readonly type="text" id="phoneNumber" value="+62 082324020862">
+    <br><br>
+    <button id="sendButton">Send to WhatsApp</button>
+  </div>
+
+    <script>
+        document.getElementById('sendButton').addEventListener('click', function() {
+            const stars = document.getElementById('star').value;
+            const message = document.getElementById('messageInput').value;
+            const phoneNumber = document.getElementById('phoneNumber').value;
+            const fullMessage = `${message}\n${stars}`;
+            const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(fullMessage)}`;
+            window.open(whatsappURL, '_blank'); // Open WhatsApp in a new tab
+        });
+    </script>
+</body>
+
+</html>
